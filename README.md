@@ -99,5 +99,5 @@ assets/images/gitar_ungu.png
 
 Hasil Output
 ### Screenshot
-![Hasil Output](./uts_cart_app1.png)
-![Detail Informasi 2](./uts_cart_app2.png)
+![Hasil Output](assets/images/uts_cart_app1.png)
+![Hasil Output 2](assets/images/uts_cart_app2.png)
