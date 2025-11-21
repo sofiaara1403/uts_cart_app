@@ -96,3 +96,8 @@ Aset gambar gitar:
 assets/images/gitar_pink.png
 assets/images/gitar_biru.png
 assets/images/gitar_ungu.png
+
+Hasil Output
+### Screenshot
+![Hasil Output](./uts_cart_app1.png)
+![Detail Informasi 2](./uts_cart_app2.png)
