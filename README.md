@@ -1,16 +1,98 @@
-# uts_cart_app
+📌 UTS Mobile Programming – Cart App (Flutter + Cubit)
 
-A new Flutter project.
+Repositori ini berisi proyek aplikasi Flutter sederhana untuk sistem keranjang belanja (cart system) menggunakan Cubit (Flutter Bloc).
+Aplikasi dibuat untuk memenuhi tugas Ujian Tengah Semester – Universitas Teknologi Bandung, Teknik Informatika.
 
-## Getting Started
+🧠 Bagian A – Jawaban Teori
+1. Jelaskan perbedaan antara Cubit dan Bloc dalam arsitektur Flutter.
+Cubit dan Bloc sama-sama bagian dari paket flutter_bloc, namun:
+~ Cubit
+- Lebih sederhana
+- Mengelola state menggunakan fungsi langsung
+- Tidak menggunakan event
+- Cocok untuk state yang tidak kompleks
 
-This project is a starting point for a Flutter application.
+~ Bloc
+- Menggunakan event dan state terpisah
+- Lebih terstruktur dan scalable untuk aplikasi besar
+- Cocok untuk logika yang lebih banyak langkah
 
-A few resources to get you started if this is your first Flutter project:
+2. Mengapa penting memisahkan UI, data model, dan business logic?
+Pemisahan ini penting karena:
+- Memudahkan maintenance
+- Kode tidak bercampur dan lebih rapi
+- Mencegah UI memproses logika berat
+- Memudahkan debugging dan testing
+- Mendukung scalability aplikasi
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+3. Sebutkan dan jelaskan tiga state yang mungkin digunakan dalam CartCubit beserta fungsinya.
+1. List Produk dalam Keranjang
+- Menyimpan daftar barang yang sedang ada dalam cart.
+2. Quantity per Item
+- Menyimpan jumlah item setiap produk untuk perhitungan total.
+3. Total Harga & Total Item
+- Menghasilkan nilai total belanja berdasarkan isi cart saat ini.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🛒 Bagian B – Implementasi
+✔️ 1. ProductModel
+Berisi:
+- id (String)
+- name (String)
+- price (int)
+- image (String path asset)
+- toMap()
+- fromMap()
+File: models/product_model.dart
+
+✔️ 2. CartCubit
+Berisi fungsi:
+- addToCart(ProductModel product)
+- removeFromCart(ProductModel product)
+- updateQuantity(ProductModel product, int qty)
+- getTotalItems()
+- getTotalPrice()
+- clearCart()
+File: blocs/cart_cubit.dart
+
+✔️ 3. ProductCard Widget
+Menampilkan:
+- Gambar produk
+- Nama produk
+- Harga
+- Tombol Tambah ke Keranjang
+File: widgets/product_card.dart
+
+✔️ 4. Halaman cart_summary_page.dart
+Menampilkan:
+- Daftar produk dalam keranjang
+- Total item
+- Total harga
+- Tombol Checkout (mengosongkan keranjang)
+File: pages/cart_summary_page.dart
+
+⭐ Bagian C – Bonus (Opsional)
+- Aplikasi ini menambahkan fitur:
+- Tombol + dan – untuk menambah atau mengurangi jumlah barang
+- Total harga dan total item langsung terupdate otomatis menggunakan Cubit
+
+Struktur Folder
+lib/
+ ├─ blocs/
+ │   └─ cart_cubit.dart
+ ├─ models/
+ │   └─ product_model.dart
+ ├─ pages/
+ │   ├─ cart_home_page.dart
+ │   └─ cart_summary_page.dart
+ ├─ widgets/
+ │   └─ product_card.dart
+ └─ main.dart
+
+🎨 Tampilan Aplikasi
+
+Tema aplikasi menggunakan warna pink aesthetic
+Font: Cherry Bomb (custom font)
+Aset gambar gitar:
+assets/images/gitar_pink.png
+assets/images/gitar_biru.png
+assets/images/gitar_ungu.png
