@@ -1,3 +1,7 @@
+Nama : Sofia Risa Aulia 
+Npm : 23552011299
+UTS Pemrograman mobile 2
+
 📌 UTS Mobile Programming – Cart App (Flutter + Cubit)
 
 Repositori ini berisi proyek aplikasi Flutter sederhana untuk sistem keranjang belanja (cart system) menggunakan Cubit (Flutter Bloc).
